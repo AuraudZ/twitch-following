@@ -6,6 +6,8 @@
   if (token) {
     const accessToken = token.split("=")[1].split("&")[0];
     localStorage.setItem("token", accessToken);
+    document.location.hash = "";
+    document.location.reload();
   }
 
   const access_token = localStorage.getItem("token");
