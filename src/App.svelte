@@ -108,13 +108,15 @@
   }
 </script>
 
-<main>
-  <div>
+<main class="m-5 mb-7">
+  <div class="text-center justify-center">
     <a href="https://id.twitch.tv/oauth2/authorize?{params}"
       >Connect with Twitch</a
     >
   </div>
-  <div>
+  <div
+    class="grid gap-4 grid-cols-1 md:grid-cols-6 sm:grid-cols-3 lg:grid-cols-6"
+  >
     {#if channels.length > 0}
       {#each channels as channel}
         <div>
