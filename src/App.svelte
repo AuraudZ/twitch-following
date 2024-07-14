@@ -1,6 +1,7 @@
-<script script lang="ts">
+<script lang="ts">
   const client_id = import.meta.env.VITE_CLIENT_ID;
-  let params = `client_id=${client_id}&redirect_uri=http://localhost:5173&response_type=token&scope=user:read:follows`;
+  const redirect_uri = import.meta.env.VITE_REDIRECT_URI;
+  let params = `client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=token&scope=user:read:follows`;
   const token = document.location.hash;
   if (token) {
     const accessToken = token.split("=")[1].split("&")[0];
